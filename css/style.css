@@ -1,0 +1,3562 @@
+/*
+	Frameless			<http://framelessgrid.com/>
+	by Joni Korpi 		<http://jonikorpi.com/>
+	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
+*/
+/*
+	Margin, padding, and border resets
+	except for form elements
+*/
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/*
+	Consistency fixes
+	adopted from http://necolas.github.com/normalize.css/
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video {
+  display: block;
+}
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  min-height: 100%;
+  font-size: 100%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+b,
+strong {
+  font-weight: bold;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a img,
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+}
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+textarea {
+  overflow: auto;
+}
+/*
+	These are easy to forget
+*/
+::selection {
+  background: red;
+  color: white;
+}
+::-moz-selection {
+  background: red;
+  color: white;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+body {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0.62);
+}
+/*
+	Style overrides for IE6-8
+	http://jonikorpi.com/leaving-old-IE-behind/
+*/
+/*
+	An easy way to zoom your entire layout in or out (as long as it's set in ems).
+	Just change the media queries to activate them.
+	Assuming your base font-size is 16:
+	- the first one zooms out by a factor of (16-2)/16 = 0.875
+	- the second one zooms in by a factor of (16+2)/16 = 1.125  
+*/
+@media screen and (max-width: 1px) {
+  body {
+    font-size: 0.875em;
+  }
+}
+@media screen and (max-width: 1px) {
+  body {
+    font-size: 1.125em;
+  }
+}
+#header {
+  height: ;
+  border-bottom: 1px solid #68696b;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 3000;
+}
+@media screen and (max-width:599px) {
+  #header {
+    width: 100%;
+    height: 44px;
+    background-color: #68696b;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 1279px) {
+  #header {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+  }
+}
+@media screen and (min-width:1280px) {
+  #header {
+    width: 100%;
+    height: 72px;
+    background-color: white;
+  }
+}
+#home {
+  width: 100%;
+  float: left;
+  height: ;
+  background-image: url();
+  background-repeat: ;
+}
+@media screen and (max-width:599px) {
+  #home {
+    height: 200px ;
+    position: relative;
+    background-color: ;
+  }
+  #home .motto {
+    width: ;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 60px;
+    left: 50%;
+    margin-left: -150px;
+    padding: 5px 10px;
+    z-index: ;
+  }
+  #home .motto p {
+    font-family: "Raleway";
+    font-size: 22px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  #home .motto span.one {
+    color: white;
+    font-weight: bold !important;
+  }
+  #home .motto span.two {
+    color: white;
+    font-weight: 400;
+  }
+  #home #simiatext {
+    width: ;
+    height: 40px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    margin-left: -145px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 14px;
+    direction: rtl;
+    color: black;
+    text-align: center;
+  }
+  #home #simiatext .comment {
+    font-size: 12px;
+    color: #68696b;
+    font-weight: ;
+    display: inline;
+  }
+  #home .downarrow1 {
+    display: none;
+  }
+  #home .downarrow2 {
+    display: none;
+  }
+  #home #giftbox {
+    display: none;
+  }
+  #home .left {
+    display: none;
+  }
+  #home #basket {
+    display: none;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 1279px) {
+  #home {
+    height: 400px;
+    background-color: ;
+    background-image: url(tabHome_bk01.png);
+    position: relative;
+  }
+  #home .motto {
+    width: ;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 116px;
+    left: 50%;
+    margin-left: -155px;
+    padding: 5px 10px;
+    z-index: ;
+  }
+  #home .motto p {
+    font-family: "Raleway";
+    font-size: 25px;
+    font-weight: 400;
+    color: #68696b;
+  }
+  #home .motto span.one {
+    color: black;
+    font-weight: bold !important;
+  }
+  #home .motto span.two {
+    color: black;
+    font-weight: 400;
+  }
+  #home #simiatext {
+    width: ;
+    height: 40px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 155px;
+    left: 50%;
+    margin-left: -150px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 16px;
+    direction: rtl;
+    color: black;
+    text-align: center;
+  }
+  #home #simiatext .comment {
+    font-size: 13px;
+    color: #68696b;
+    font-weight: ;
+    display: inline;
+  }
+  #home .downarrow1 {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -280px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 25px;
+    z-index: 2000;
+  }
+  #home .downarrow1 a {
+    color: #68696b;
+  }
+  #home .downarrow1 a:hover {
+    color: red;
+  }
+  #home .downarrow2 {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 40px;
+    right: 0px;
+    margin-right: 220px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 25px;
+    z-index: 2000;
+  }
+  #home .downarrow2 a {
+    color: #68696b;
+  }
+  #home .downarrow2 a:hover {
+    color: red;
+  }
+  #home #giftbox {
+    width: 99px;
+    height: 58px;
+    position: absolute;
+    top: 300px;
+    left: 180px;
+  }
+  #home #giftbox img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #home .left {
+    width: 50%;
+    height: 100%;
+    background-color: ;
+  }
+  #home .left #plex {
+    width: 250px;
+    height: 374px;
+    float: left;
+    background-color: ;
+    position: relative;
+  }
+  #home .left #plex img {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #home .left #plex .gifttxt {
+    width: 170px;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    background-color: ;
+    direction: rtl;
+    padding-top: 10px;
+  }
+  #home .left #plex .gifttxt .title {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+    font-weight: ;
+    margin-top: 25px;
+  }
+  #home .left #plex .gifttxt .comment {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 11px;
+    color: #68696b;
+    font-weight: ;
+  }
+  #home #basket {
+    width: 350px;
+    height: 70px;
+    position: absolute;
+    bottom: 41px;
+    right: 0px;
+    box-sizing: border-box;
+    background-color: ;
+  }
+  #home #basket .basket {
+    width: 108.5px;
+    height: 70px;
+    float: right;
+    margin-right: 30px;
+  }
+  #home #basket .basket img {
+    max-width: 100%;
+  }
+  #home #basket .baskettxt {
+    width: 180px;
+    height: 70px;
+    float: right;
+    direction: rtl;
+    box-sizing: border-box;
+    padding-bottom: ;
+    padding-right: 10px;
+  }
+  #home #basket .baskettxt .title {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+    font-weight: ;
+    margin-top: 20px;
+  }
+  #home #basket .baskettxt .comment {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 11px;
+    color: #68696b;
+    font-weight: ;
+  }
+}
+@media screen and (min-width:1280px) {
+  #home {
+    height: 567px;
+    position: relative;
+    background-image: url(bk32.png);
+    background-color: ;
+  }
+  #home .motto {
+    width: 600px;
+    position: absolute;
+    top: 242px;
+    left: 444px;
+    z-index: 3000;
+  }
+  #home .motto p {
+    font-family: "Raleway";
+    font-size: 45px;
+    font-weight: 200;
+    color: #cccac3;
+  }
+  #home .motto span.one {
+    color: black;
+    font-weight: bold !important;
+  }
+  #home .motto span.two {
+    color: white;
+    font-weight: 200;
+  }
+  #home .downarrow1 {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -550px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 25px;
+    z-index: 2000;
+  }
+  #home .downarrow1 a {
+    color: #68696b;
+  }
+  #home .downarrow1 a:hover {
+    color: red;
+  }
+  #home .downarrow2 {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 31px;
+    left: 50%;
+    margin-left: -105px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 25px;
+    z-index: 2000;
+  }
+  #home .downarrow2 a {
+    color: #68696b;
+  }
+  #home .downarrow2 a:hover {
+    color: red;
+  }
+  #home #giftbox {
+    display: none;
+  }
+  #home .left {
+    width: 50%;
+    height: 100%;
+    background-color: ;
+  }
+  #home .left #plex {
+    width: 368px;
+    height: 550px;
+    float: left;
+    background-color: ;
+    position: relative;
+  }
+  #home .left #plex img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  #home .left #plex .gifttxt {
+    width: 210px;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: ;
+    direction: rtl;
+  }
+  #home .left #plex .gifttxt .title {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+    font-weight: ;
+    margin-top: 25px;
+  }
+  #home .left #plex .gifttxt .comment {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: #68696b;
+    font-weight: ;
+  }
+  #home #basket {
+    width: 410px;
+    height: 80px;
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    margin-left: -180px;
+    box-sizing: border-box;
+    background-color: ;
+  }
+  #home #basket .basket {
+    width: 124px;
+    height: 80px;
+    float: right;
+    margin-right: 30px;
+  }
+  #home #basket .basket img {
+    max-width: 100%;
+  }
+  #home #basket .baskettxt {
+    width: 230px;
+    height: 80px;
+    float: right;
+    direction: rtl;
+    box-sizing: border-box;
+    padding-top: 0px;
+    padding-right: 20px;
+  }
+  #home #basket .baskettxt .title {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+    font-weight: ;
+    margin-top: 25px;
+  }
+  #home #basket .baskettxt .comment {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: #68696b;
+    font-weight: ;
+  }
+  #home #simiatext {
+    width: 300px;
+    height: 40px;
+    box-sizing: border-box;
+    padding-right: 10px;
+    position: absolute;
+    bottom: 45px;
+    right: 0px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 14px;
+    direction: rtl;
+    color: black;
+  }
+  #home #simiatext .comment {
+    font-size: 11px;
+    color: #68696b;
+    font-weight: ;
+  }
+}
+#gift {
+  width: 100%;
+  float: left;
+  background-image: url();
+}
+#gift .ldesclick {
+  display: none;
+}
+@media screen and (max-width:599px) {
+  #gift {
+    height: 520px ;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  #gift .motto {
+    width: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 40px;
+    left: 50%;
+    margin-left: -158px;
+    padding: 5px 10px;
+    z-index: ;
+  }
+  #gift .motto p {
+    font-family: "Raleway";
+    font-size: 17px;
+    font-weight: 400;
+    color: black;
+  }
+  #gift .motto span.one {
+    color: #7bb933;
+    font-weight: bold !important;
+    font-size: 20px;
+  }
+  #gift .motto span.two {
+    color: #7bb933;
+    font-weight: 400;
+  }
+  #gift #simiatext {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    padding-right: 0px;
+    padding-top: 5px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -158px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 16px;
+    direction: rtl;
+    color: white;
+    text-align: center;
+  }
+  #gift #simiatext .comment {
+    font-size: 13px;
+    color: white;
+    font-weight: ;
+    display: inline;
+  }
+  #gift #creditcard {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #gift #creditcard img {
+    max-width: 65px;
+    max-height: 65px;
+  }
+  #gift #creditcard p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+  }
+  #gift #creditcard span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 11px;
+    color: ;
+  }
+  #gift #delivery {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #gift #delivery img {
+    max-width: 65px;
+    max-height: 65px;
+  }
+  #gift #delivery p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+  }
+  #gift #delivery span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 11px;
+    color: ;
+  }
+  #gift #diversity {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    left: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #gift #diversity img {
+    max-width: 120px;
+    max-height: 65px;
+  }
+  #gift #diversity p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+  }
+  #gift #rate {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    right: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #gift #rate img {
+    max-width: 65px;
+    max-height: 65px;
+  }
+  #gift #rate p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+  }
+  #gift #rate .one1 {
+    display: inline;
+    font-family: "Droid Arabic Naskh";
+    font-size: 11px;
+    color: ;
+  }
+  #gift #rate .two2 {
+    display: block;
+    font-family: "Droid Arabic Naskh";
+    font-size: 11px;
+    color: ;
+  }
+  #gift #giftbtn {
+    width: 150px;
+    height: 40px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 390px;
+    left: 50%;
+    margin-left: -60px;
+    background-color: #7bb933;
+    text-align: center;
+    font-family: 'Droid Arabic Kufi';
+    color: white !important;
+    font-size: 12px;
+    direction: rtl;
+    padding-top: 5px;
+  }
+  #gift #giftbtn a:link {
+    text-decoration: none;
+    color: white;
+  }
+  #gift #giftbtn a:hover {
+    color: black;
+  }
+  #gift #gifttooltip {
+    display: none;
+  }
+  #gift #gifticon {
+    display: none;
+  }
+  #gift #downarrow3 {
+    display: none;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 1279px) {
+  #gift {
+    height: 650px;
+    background-image: url(tabGift_bk01.png);
+    border-top: 1px solid black;
+    position: relative;
+    margin-top: 30px;
+  }
+  #gift .motto {
+    width: ;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 96px;
+    left: 50%;
+    margin-left: -215px;
+    padding: 5px 10px;
+    z-index: ;
+  }
+  #gift .motto p {
+    font-family: "Raleway";
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+  }
+  #gift .motto span.one {
+    color: #7bb933;
+    font-weight: bold !important;
+  }
+  #gift .motto span.two {
+    color: #7bb933;
+    font-weight: 400;
+  }
+  #gift #simiatext {
+    width: ;
+    height: 40px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 135px;
+    left: 50%;
+    margin-left: -150px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 16px;
+    direction: rtl;
+    color: white;
+    text-align: center;
+  }
+  #gift #simiatext .comment {
+    font-size: 13px;
+    color: white;
+    font-weight: ;
+    display: inline;
+  }
+  #gift #creditcard {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    left: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #gift #creditcard img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+  #gift #creditcard p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #gift #creditcard span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: ;
+  }
+  #gift #delivery {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    right: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #gift #delivery img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+  #gift #delivery p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #gift #delivery span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: ;
+  }
+  #gift #diversity {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 400px;
+    left: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #gift #diversity img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #gift #diversity p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #gift #rate {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 400px;
+    right: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #gift #rate img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+  #gift #rate p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #gift #rate .one1 {
+    display: inline;
+    font-family: "Droid Arabic Naskh";
+    font-size: 13px;
+    color: ;
+  }
+  #gift #rate .two2 {
+    display: block;
+    font-family: "Droid Arabic Naskh";
+    font-size: 13px;
+    color: ;
+  }
+  #gift #giftbtn {
+    width: 150px;
+    height: 40px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 590px;
+    left: 50%;
+    margin-left: -60px;
+    background-color: #7bb933;
+    text-align: center;
+    font-family: 'Droid Arabic Kufi';
+    color: white !important;
+    font-size: 12px;
+    direction: rtl;
+    padding-top: 5px;
+  }
+  #gift #giftbtn a:link {
+    text-decoration: none;
+    color: white;
+  }
+  #gift #giftbtn a:hover {
+    color: black;
+  }
+  #gift #gifttooltip {
+    display: none;
+  }
+  #gift #gifticon {
+    display: none;
+  }
+}
+@media screen and (min-width:1280px) {
+  #gift {
+    height: 567px;
+    position: relative;
+    margin-top: 20px;
+    background-image: url(giftbk12.png);
+  }
+  #gift .motto {
+    width: ;
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    margin-left: -470px;
+    padding: 5px 10px;
+    z-index: 3000;
+  }
+  #gift .motto p {
+    font-family: "Raleway";
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+  }
+  #gift .motto span.one {
+    display: none;
+  }
+  #gift .motto .ldesclick {
+    display: inline;
+    color: #8e498f;
+  }
+  #gift .motto span.two {
+    color: #8e498f;
+    font-weight: 400;
+  }
+  #gift #simiatext {
+    width: ;
+    height: 40px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 18px;
+    font-weight: bold;
+    direction: rtl;
+    color: #653466;
+    text-align: center;
+    background-color: ;
+  }
+  #gift #simiatext .comment {
+    font-size: 16px;
+    font-weight: 400;
+    color: #8e498f;
+    font-weight: ;
+    display: inline;
+  }
+  #gift #creditcard {
+    display: ;
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    right: 345px;
+    text-align: center;
+    direction: rtl;
+  }
+  #gift #creditcard img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+  #gift #creditcard p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #gift #creditcard span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: ;
+  }
+  #gift #delivery {
+    display: ;
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    right: 190px;
+    text-align: center;
+    direction: rtl;
+  }
+  #gift #delivery img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+  #gift #delivery p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #gift #delivery span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: ;
+  }
+  #gift #diversity {
+    display: ;
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    right: 500px;
+    text-align: center;
+    direction: rtl;
+  }
+  #gift #diversity img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #gift #diversity p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #gift #rate {
+    display: ;
+    width: 160px;
+    height: 120px;
+    position: absolute;
+    top: 130px;
+    right: 0px;
+    margin-right: ;
+    text-align: center;
+    direction: rtl;
+  }
+  #gift #rate img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+  #gift #rate p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #gift #rate .one1 {
+    display: inline;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: ;
+  }
+  #gift #rate .two2 {
+    display: block;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: ;
+  }
+  #gift #gifttooltip {
+    width: 150px;
+    height: 55px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 418px;
+    left: 50%;
+    margin-left: -460px;
+    background-image: url(gifttooltip3.png);
+    text-align: center;
+    font-family: 'Droid Arabic Naskh';
+    color: #653466;
+    font-size: 12px;
+    direction: rtl;
+    padding-top: 22px;
+  }
+  #gift #gifttooltip p {
+    text-decoration: none;
+  }
+  #gift #gifttooltip p a:link {
+    color: #653466 !important;
+  }
+  #gift #gifttooltip p a:visited {
+    color: #653466 !important;
+  }
+  #gift #gifttooltip p a:hover {
+    color: black !important;
+  }
+  #gift #gifttooltip p a:active {
+    color: #653466 !important;
+  }
+  #gift #gifticon {
+    width: 60px;
+    position: absolute;
+    top: 247px;
+    left: 179px;
+    text-align: center;
+    font-size: 40px;
+    z-index: 5000;
+    color: #8e498f;
+  }
+  #gift #giftbtn {
+    display: none;
+  }
+  #gift #downarrow3 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 552px;
+    left: 50%;
+    margin-left: -25px;
+    color: #9c519f;
+    text-align: center;
+    font-size: 35px;
+  }
+}
+#store {
+  width: 100%;
+  float: left;
+  height: 500px;
+  background-color: ;
+}
+@media screen and (max-width:599px) {
+  #store {
+    height: 540px;
+    position: relative;
+  }
+  #store .motto {
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 38px;
+    left: 0px;
+    padding: 5px 10px;
+    text-align: center;
+    z-index: ;
+  }
+  #store .motto p {
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 400;
+    color: #68696b;
+  }
+  #store .motto span.one {
+    color: #7bb933;
+    font-weight: bold !important;
+    font-size: 21px;
+  }
+  #store .motto span.two {
+    color: #7bb933;
+    font-weight: 400;
+  }
+  #store .motto span.ldesclick {
+    display: none;
+  }
+  #store #simiatext {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    padding-top: 5px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -157px;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: 'Droid Arabic Naskh';
+    font-size: 16px;
+    direction: rtl;
+    color: white;
+    text-align: center;
+  }
+  #store #simiatext .comment {
+    font-size: 13px;
+    color: white;
+    font-weight: ;
+    display: inline;
+  }
+  #store #craft {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #store #craft img {
+    max-width: 120px;
+    max-height: 65px;
+  }
+  #store #craft p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+  }
+  #store #craft span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 11px;
+    color: ;
+  }
+  #store #food {
+    width: 50;
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    text-align: center;
+    direction: rtl;
+  }
+  #store #food img {
+    max-width: 120px;
+    max-height: 65px;
+  }
+  #store #food p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+  }
+  #store #food span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 11px;
+    color: ;
+  }
+  #store #fast {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    left: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #store #fast img {
+    max-width: 120px;
+    max-height: 65px;
+  }
+  #store #fast p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+  }
+  #store #storebtn {
+    width: 150px;
+    height: 40px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 410px;
+    left: 50%;
+    margin-left: -75px;
+    background-color: #7bb933;
+    text-align: center;
+    font-family: 'Droid Arabic Kufi';
+    color: white;
+    font-size: 12px;
+    direction: rtl;
+    padding-top: 5px;
+  }
+  #store #storetooltip {
+    display: none;
+  }
+  #store #storeicon {
+    display: none;
+  }
+  #store #downarrow4 {
+    display: none;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 1279px) {
+  #store {
+    height: 550px;
+    background-image: url(tabStore_bk01.png);
+    border-top: 1px solid black;
+    position: relative;
+    margin-top: 30px;
+  }
+  #store .motto {
+    width: ;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 96px;
+    left: 50%;
+    margin-left: -240px;
+    padding: 5px 10px;
+    z-index: ;
+  }
+  #store .motto p {
+    font-family: "Raleway";
+    font-size: 25px;
+    font-weight: 400;
+    color: #68696b;
+  }
+  #store .motto span.one {
+    color: #7bb933;
+    font-weight: bold !important;
+    font-size: 28px;
+  }
+  #store .motto span.two {
+    color: #7bb933;
+    font-weight: 400;
+  }
+  #store .motto span.ldesclick {
+    display: none;
+  }
+  #store #simiatext {
+    width: ;
+    height: 40px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 145px;
+    left: 50%;
+    margin-left: -150px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 16px;
+    direction: rtl;
+    color: white;
+    text-align: center;
+  }
+  #store #simiatext .comment {
+    font-size: 13px;
+    color: white;
+    font-weight: ;
+    display: inline;
+  }
+  #store #craft {
+    width: 33.333333333%;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    left: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #store #craft img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #store #craft p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #store #craft span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: ;
+  }
+  #store #food {
+    width: 33.333333333;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    right: 10px;
+    text-align: center;
+    direction: rtl;
+  }
+  #store #food img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #store #food p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #store #food span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: ;
+  }
+  #store #fast {
+    width: 33%;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    left: 200px;
+    text-align: center;
+    direction: rtl;
+  }
+  #store #fast img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #store #fast p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #store #storebtn {
+    width: 150px;
+    height: 40px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 430px;
+    left: 50%;
+    margin-left: -75px;
+    background-color: #7bb933;
+    text-align: center;
+    font-family: 'Droid Arabic Kufi';
+    color: white;
+    font-size: 12px;
+    direction: rtl;
+    padding-top: 5px;
+  }
+  #store #storetooltip {
+    display: none;
+  }
+  #store #storeicon {
+    display: none;
+  }
+}
+@media screen and (min-width:1280px) {
+  #store {
+    height: 567px;
+    position: relative;
+    margin-top: 100px;
+    background-image: url(ldesStorebk12.png);
+  }
+  #store .motto {
+    width: ;
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    margin-left: -470px;
+    padding: 5px 10px;
+    z-index: 3000;
+  }
+  #store .motto p {
+    font-family: "Raleway";
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+  }
+  #store .motto span.one {
+    display: none;
+  }
+  #store .motto .ldesclick {
+    display: inline;
+    color: #4c7320;
+  }
+  #store .motto span.two {
+    color: #4c7320;
+    font-weight: 400;
+  }
+  #store #simiatext {
+    width: ;
+    height: 40px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 45px;
+    right: 30px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 18px;
+    font-weight: bold;
+    direction: rtl;
+    color: #4c7320;
+    text-align: center;
+    background-color: ;
+  }
+  #store #simiatext .comment {
+    font-size: 16px;
+    font-weight: 400;
+    color: #4c7320;
+    font-weight: ;
+    display: inline;
+  }
+  #store #craft {
+    display: ;
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    right: 10px;
+    text-align: center;
+    direction: rtl;
+  }
+  #store #craft img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #store #craft p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #store #craft span {
+    display: block;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 12px;
+    color: black;
+    text-align: center;
+  }
+  #store #food {
+    display: ;
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    right: 200px;
+    text-align: center;
+    direction: rtl;
+  }
+  #store #food img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #store #food p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #store #food span {
+    display: block;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 12px;
+    color: black;
+    text-align: center;
+  }
+  #store #fast {
+    width: 170px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    right: 390px;
+    text-align: center;
+    direction: rtl;
+  }
+  #store #fast img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #store #fast p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #store #storetooltip {
+    width: 150px;
+    height: 55px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 418px;
+    left: 50%;
+    margin-left: -460px;
+    background-image: url(gifttooltip3.png);
+    text-align: center;
+    font-family: 'Droid Arabic Naskh';
+    color: #4c7320;
+    font-size: 12px;
+    direction: rtl;
+    padding-top: 22px;
+  }
+  #store #storetooltip p {
+    text-decoration: none;
+  }
+  #store #storetooltip p a:link {
+    color: #4c7320 !important;
+  }
+  #store #storetooltip p a:visited {
+    color: #4c7320 !important;
+  }
+  #store #storetooltip p a:hover {
+    color: black !important;
+  }
+  #store #storetooltip p a:active {
+    color: #4c7320 !important;
+  }
+  #store #storeicon {
+    width: 60px;
+    position: absolute;
+    top: 247px;
+    left: 179px;
+    text-align: center;
+    font-size: 40px;
+    z-index: 5000;
+    color: #7bb933;
+  }
+  #store #storebtn {
+    display: none;
+  }
+  #store #downarrow4 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 552px;
+    left: 50%;
+    margin-left: -25px;
+    color: #7bb933;
+    text-align: center;
+    font-size: 35px;
+  }
+}
+#stuff {
+  width: 100%;
+  float: left;
+  height: ;
+  background-color: ;
+}
+@media screen and (max-width:599px) {
+  #stuff {
+    height: 590px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  #stuff .motto {
+    width: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 40px;
+    left: 0px;
+    padding: 5px 10px;
+    z-index: ;
+  }
+  #stuff .motto p {
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+  }
+  #stuff .motto span.one {
+    color: #7bb933;
+    font-weight: bold !important;
+    font-size: 20px;
+  }
+  #stuff .motto span.two {
+    color: #7bb933;
+    font-weight: 400;
+  }
+  #stuff .motto span.ldesclick {
+    display: none;
+  }
+  #stuff #simiatext {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    padding-right: 0px;
+    padding-top: 5px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-left: ;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 16px;
+    direction: rtl;
+    color: white;
+    text-align: center;
+  }
+  #stuff #simiatext .comment {
+    font-size: 13px;
+    color: white;
+    font-weight: ;
+    display: inline;
+  }
+  #stuff #lowcost {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    left: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #stuff #lowcost img {
+    max-width: 120px;
+    max-height: 65px;
+  }
+  #stuff #lowcost p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+  }
+  #stuff #lowcost span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 11px;
+    color: ;
+  }
+  #stuff #student {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    right: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #stuff #student img {
+    max-width: 120px;
+    max-height: 65px;
+  }
+  #stuff #student p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+  }
+  #stuff #student span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 11px;
+    color: ;
+  }
+  #stuff #bank {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 270px;
+    left: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #stuff #bank img {
+    max-width: 120px;
+    max-height: 65px;
+  }
+  #stuff #bank p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+  }
+  #stuff #justice {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 270px;
+    right: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #stuff #justice img {
+    max-width: 120px;
+    max-height: 65px;
+  }
+  #stuff #justice p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+  }
+  #stuff #justice .one1 {
+    display: inline;
+    font-family: "Droid Arabic Naskh";
+    font-size: 11px;
+    color: ;
+  }
+  #stuff #justice .two2 {
+    display: block;
+    font-family: "Droid Arabic Naskh";
+    font-size: 11px;
+    color: ;
+  }
+  #stuff #stuffbtn {
+    width: 150px;
+    height: 40px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    margin-left: -60px;
+    background-color: #7bb933;
+    text-align: center;
+    font-family: 'Droid Arabic Kufi';
+    color: white !important;
+    font-size: 12px;
+    direction: rtl;
+    padding-top: 5px;
+  }
+  #stuff #stuffbtn a:link {
+    text-decoration: none;
+    color: white;
+  }
+  #stuff #stuffbtn a:hover {
+    color: black;
+  }
+  #stuff #stufftooltip {
+    display: none;
+  }
+  #stuff #stufficon {
+    display: none;
+  }
+  #stuff #downarrow5 {
+    display: none;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 1279px) {
+  #stuff {
+    height: 650px;
+    background-image: url(tabGift_bk01.png);
+    border-top: 1px solid black;
+    position: relative;
+    margin-top: 30px;
+  }
+  #stuff .motto {
+    width: ;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 96px;
+    left: 50%;
+    margin-left: -240px;
+    padding: 5px 10px;
+    z-index: ;
+  }
+  #stuff .motto p {
+    font-family: "Raleway";
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+  }
+  #stuff .motto span.one {
+    color: #7bb933;
+    font-weight: bold !important;
+  }
+  #stuff .motto span.two {
+    color: #7bb933;
+    font-weight: 400;
+  }
+  #stuff .motto span.ldesclick {
+    display: none;
+  }
+  #stuff #simiatext {
+    width: ;
+    height: 40px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 135px;
+    left: 50%;
+    margin-left: -100px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 16px;
+    direction: rtl;
+    color: white;
+    text-align: center;
+  }
+  #stuff #simiatext .comment {
+    font-size: 13px;
+    color: white;
+    font-weight: ;
+    display: inline;
+  }
+  #stuff #lowcost {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    left: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #stuff #lowcost img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #stuff #lowcost p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #stuff #lowcost span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: ;
+  }
+  #stuff #student {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    right: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #stuff #student img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #stuff #student p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #stuff #student span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: ;
+  }
+  #stuff #bank {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 400px;
+    left: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #stuff #bank img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #stuff #bank p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #stuff #justice {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 400px;
+    right: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #stuff #justice img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #stuff #justice p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #stuff #justice .one1 {
+    display: inline;
+    font-family: "Droid Arabic Naskh";
+    font-size: 13px;
+    color: ;
+  }
+  #stuff #justice .two2 {
+    display: block;
+    font-family: "Droid Arabic Naskh";
+    font-size: 13px;
+    color: ;
+  }
+  #stuff #stuffbtn {
+    width: 150px;
+    height: 40px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 590px;
+    left: 50%;
+    margin-left: -60px;
+    background-color: #7bb933;
+    text-align: center;
+    font-family: 'Droid Arabic Kufi';
+    color: white !important;
+    font-size: 12px;
+    direction: rtl;
+    padding-top: 5px;
+  }
+  #stuff #stuffbtn a:link {
+    text-decoration: none;
+    color: white;
+  }
+  #stuff #stuffbtn a:hover {
+    color: black;
+  }
+  #stuff #stufftooltip {
+    display: none;
+  }
+  #stuff #stufficon {
+    display: none;
+  }
+}
+@media screen and (min-width:1280px) {
+  #stuff {
+    height: 567px;
+    position: relative;
+    margin-top: 100px;
+    background-image: url(ldesStuffbk5.png);
+  }
+  #stuff .motto {
+    width: ;
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    margin-left: -470px;
+    padding: 5px 10px;
+    z-index: 3000;
+  }
+  #stuff .motto p {
+    font-family: "Raleway";
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+  }
+  #stuff .motto span.one {
+    display: none;
+  }
+  #stuff .motto .ldesclick {
+    display: inline;
+    color: #c49512;
+  }
+  #stuff .motto span.two {
+    color: #c49512;
+    font-weight: 400;
+  }
+  #stuff #simiatext {
+    width: ;
+    height: 40px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 45px;
+    right: 30px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 18px;
+    font-weight: bold;
+    direction: rtl;
+    color: #997518;
+    text-align: center;
+    background-color: ;
+  }
+  #stuff #simiatext .comment {
+    font-size: 16px;
+    font-weight: 400;
+    color: #997518;
+    font-weight: ;
+    display: inline;
+  }
+  #stuff #lowcost {
+    display: ;
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    right: 10px;
+    text-align: center;
+    direction: rtl;
+  }
+  #stuff #lowcost img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #stuff #lowcost p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #stuff #lowcost span {
+    display: block;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 12px;
+    color: black;
+    text-align: center;
+  }
+  #stuff #student {
+    display: ;
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    right: 320px;
+    text-align: center;
+    direction: rtl;
+  }
+  #stuff #student img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #stuff #student p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #stuff #student span {
+    display: block;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 12px;
+    color: black;
+    text-align: center;
+  }
+  #stuff #bank {
+    width: 170px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    right: 150px;
+    text-align: center;
+    direction: rtl;
+  }
+  #stuff #bank img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #stuff #bank p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #stuff #bank span {
+    display: block;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 12px;
+    color: black;
+    text-align: center;
+  }
+  #stuff #justice {
+    width: 170px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    right: 470px;
+    text-align: center;
+    direction: rtl;
+  }
+  #stuff #justice img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #stuff #justice p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #stuff #justice span {
+    display: block;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 12px;
+    color: black;
+    text-align: center;
+  }
+  #stuff #stufftooltip {
+    width: 150px;
+    height: 55px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 418px;
+    left: 50%;
+    margin-left: -460px;
+    background-image: url(gifttooltip3.png);
+    text-align: center;
+    font-family: 'Droid Arabic Naskh';
+    color: #ab810f;
+    font-size: 12px;
+    direction: rtl;
+    padding-top: 22px;
+  }
+  #stuff #stufftooltip p {
+    text-decoration: none;
+  }
+  #stuff #stufftooltip p a:link {
+    color: #ab810f !important;
+  }
+  #stuff #stufftooltip p a:visited {
+    color: #ab810f !important;
+  }
+  #stuff #stufftooltip p a:hover {
+    color: black !important;
+  }
+  #stuff #stufftooltip p a:active {
+    color: #ab810f !important;
+  }
+  #stuff #stufficon {
+    width: 60px;
+    position: absolute;
+    top: 247px;
+    left: 179px;
+    text-align: center;
+    font-size: 40px;
+    z-index: 5000;
+    color: #c49512;
+  }
+  #stuff #stuffbtn {
+    display: none;
+  }
+  #stuff #downarrow5 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 552px;
+    left: 50%;
+    margin-left: -25px;
+    color: #f7ba17;
+    text-align: center;
+    font-size: 35px;
+  }
+}
+#follow {
+  width: 100%;
+  float: left;
+  height: ;
+  background-color: ;
+}
+@media screen and (max-width:599px) {
+  #follow {
+    height: 540px;
+    position: relative;
+  }
+  #follow .motto {
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 38px;
+    left: 0px;
+    padding: 5px 10px;
+    text-align: center;
+    z-index: ;
+  }
+  #follow .motto p {
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 400;
+    color: #68696b;
+  }
+  #follow .motto span.one {
+    color: #7bb933;
+    font-weight: bold !important;
+    font-size: 21px;
+  }
+  #follow .motto span.two {
+    color: #7bb933;
+    font-weight: 400;
+  }
+  #follow .motto span.ldesclick {
+    display: none;
+  }
+  #follow #simiatext {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    padding-top: 5px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -157px;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: 'Droid Arabic Naskh';
+    font-size: 16px;
+    direction: rtl;
+    color: white;
+    text-align: center;
+  }
+  #follow #simiatext .comment {
+    font-size: 13px;
+    color: white;
+    font-weight: ;
+    display: inline;
+  }
+  #follow #individual {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #follow #individual img {
+    max-width: 120px;
+    max-height: 65px;
+  }
+  #follow #individual p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+  }
+  #follow #individual span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 11px;
+    color: ;
+  }
+  #follow #family {
+    width: 50;
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    text-align: center;
+    direction: rtl;
+  }
+  #follow #family img {
+    max-width: 120px;
+    max-height: 65px;
+  }
+  #follow #family p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+  }
+  #follow #family span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 11px;
+    color: ;
+  }
+  #follow #kids {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    left: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #follow #kids img {
+    max-width: 120px;
+    max-height: 65px;
+  }
+  #follow #kids p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    color: black;
+  }
+  #follow #kids span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 11px;
+    color: ;
+  }
+  #follow #counselbtn {
+    width: 150px;
+    height: 40px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 410px;
+    left: 50%;
+    margin-left: -75px;
+    background-color: #7bb933;
+    text-align: center;
+    font-family: 'Droid Arabic Kufi';
+    color: white;
+    font-size: 12px;
+    direction: rtl;
+    padding-top: 5px;
+  }
+  #follow #counseltooltip {
+    display: none;
+  }
+  #follow #counselicon {
+    display: none;
+  }
+  #follow #downarrow6 {
+    display: none;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 1279px) {
+  #follow {
+    height: 550px;
+    background-image: url(tabStore_bk01.png);
+    border-top: 1px solid black;
+    position: relative;
+    margin-top: 30px;
+  }
+  #follow .motto {
+    width: ;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 96px;
+    left: 50%;
+    margin-left: -240px;
+    padding: 5px 10px;
+    z-index: ;
+  }
+  #follow .motto p {
+    font-family: "Raleway";
+    font-size: 21px;
+    font-weight: 400;
+    color: #68696b;
+  }
+  #follow .motto span.one {
+    color: #7bb933;
+    font-weight: bold !important;
+    font-size: 28px;
+  }
+  #follow .motto span.two {
+    color: #7bb933;
+    font-weight: 400;
+  }
+  #follow .motto span.ldesclick {
+    display: none;
+  }
+  #follow #simiatext {
+    width: ;
+    height: 40px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 145px;
+    left: 50%;
+    margin-left: -130px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 16px;
+    direction: rtl;
+    color: white;
+    text-align: center;
+  }
+  #follow #simiatext .comment {
+    font-size: 13px;
+    color: white;
+    font-weight: ;
+    display: inline;
+  }
+  #follow #individual {
+    width: 33.333333333%;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    left: 0px;
+    text-align: center;
+    direction: rtl;
+  }
+  #follow #individual img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #follow #individual p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #follow #individual span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: ;
+  }
+  #follow #family {
+    width: 33.333333333;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    right: 10px;
+    text-align: center;
+    direction: rtl;
+  }
+  #follow #family img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #follow #family p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #follow #family span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: ;
+  }
+  #follow #kids {
+    width: 33%;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    left: 200px;
+    text-align: center;
+    direction: rtl;
+  }
+  #follow #kids img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #follow #kids p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #follow #kids span {
+    display: block;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: ;
+  }
+  #follow #counselbtn {
+    width: 150px;
+    height: 40px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 430px;
+    left: 50%;
+    margin-left: -75px;
+    background-color: #7bb933;
+    text-align: center;
+    font-family: 'Droid Arabic Kufi';
+    color: white;
+    font-size: 12px;
+    direction: rtl;
+    padding-top: 5px;
+  }
+  #follow #counseltooltip {
+    display: none;
+  }
+  #follow #counselicon {
+    display: none;
+  }
+}
+@media screen and (min-width:1280px) {
+  #follow {
+    height: 567px;
+    position: relative;
+    margin-top: 100px;
+    background-image: url(ldesconsultbk3.png);
+  }
+  #follow .motto {
+    width: ;
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    margin-left: -470px;
+    padding: 5px 10px;
+    z-index: 3000;
+  }
+  #follow .motto p {
+    font-family: "Raleway";
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+  }
+  #follow .motto span.one {
+    display: none;
+  }
+  #follow .motto .ldesclick {
+    display: inline;
+    color: #4c7320;
+  }
+  #follow .motto span.two {
+    color: #4c7320;
+    font-weight: 400;
+  }
+  #follow #simiatext {
+    width: ;
+    height: 40px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 45px;
+    right: 30px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 18px;
+    font-weight: bold;
+    direction: rtl;
+    color: #4c7320;
+    text-align: center;
+    background-color: ;
+  }
+  #follow #simiatext .comment {
+    font-size: 16px;
+    font-weight: 400;
+    color: #4c7320;
+    font-weight: ;
+    display: inline;
+  }
+  #follow #individual {
+    display: ;
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    right: 10px;
+    text-align: center;
+    direction: rtl;
+  }
+  #follow #individual img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #follow #individual p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #follow #individual span {
+    display: block;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 12px;
+    color: black;
+    text-align: center;
+  }
+  #follow #family {
+    display: ;
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    right: 200px;
+    text-align: center;
+    direction: rtl;
+  }
+  #follow #family img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #follow #family p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #follow #family span {
+    display: block;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 12px;
+    color: black;
+    text-align: center;
+  }
+  #follow #kids {
+    width: 170px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    right: 390px;
+    text-align: center;
+    direction: rtl;
+  }
+  #follow #kids img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  #follow #kids p {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 15px;
+    color: black;
+  }
+  #follow #kids span {
+    display: block;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 12px;
+    color: black;
+    text-align: center;
+  }
+  #follow #counseltooltip {
+    width: 150px;
+    height: 55px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 418px;
+    left: 50%;
+    margin-left: -460px;
+    background-image: url(gifttooltip3.png);
+    text-align: center;
+    font-family: 'Droid Arabic Naskh';
+    color: #4c7320;
+    font-size: 12px;
+    direction: rtl;
+    padding-top: 22px;
+  }
+  #follow #counseltooltip p {
+    text-decoration: none;
+  }
+  #follow #counseltooltip p a:link {
+    color: #4c7320 !important;
+  }
+  #follow #counseltooltip p a:visited {
+    color: #4c7320 !important;
+  }
+  #follow #counseltooltip p a:hover {
+    color: black !important;
+  }
+  #follow #counseltooltip p a:active {
+    color: #4c7320 !important;
+  }
+  #follow #counselicon {
+    width: 60px;
+    position: absolute;
+    top: 247px;
+    left: 179px;
+    text-align: center;
+    font-size: 40px;
+    z-index: 5000;
+    color: #7bb933;
+  }
+  #follow #counselbtn {
+    display: none;
+  }
+  #follow #downarrow6 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 552px;
+    left: 50%;
+    margin-left: -25px;
+    color: #7bb933;
+    text-align: center;
+    font-size: 35px;
+  }
+}
+#contac2 {
+  width: 100%;
+  float: left;
+  height: 50px;
+}
+#contact {
+  width: 100%;
+  float: left;
+  height: ;
+  background-color: ;
+}
+@media screen and (max-width:599px) {
+  #contact {
+    height: 500px;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background-image: url(sphContact_bk01.png);
+  }
+  #contact #phone {
+    width: 270px ;
+    height: 200px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 100px;
+    right: 60px;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: ;
+    direction: ;
+    color: #68696b;
+    text-align: right;
+    background-color: ;
+  }
+  #contact #phone .comment {
+    font-size: 12px;
+    font-family: 'Droid Arabic Naskh';
+    color: #68696b;
+    font-weight: ;
+    display: ;
+  }
+  #contact #icones {
+    width: 50px ;
+    height: 240px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 95px;
+    right: 13px;
+    font-size: 20px;
+    font-weight: bold;
+    direction: ;
+    color: black;
+    text-align: center;
+    background-color: ;
+  }
+  #contact #icones .comment {
+    margin-top: 8px;
+  }
+  #contact #simialogo {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: 150px;
+    left: 0px;
+    z-index: 6;
+    text-align: center;
+  }
+  #contact #simialogo img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  #contact #text {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 115px;
+    left: 0px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    font-weight: bold;
+    direction: rtl;
+    color: #592e59;
+    text-align: center;
+    z-index: 6;
+  }
+  #contact #text .comment {
+    font-size: 12px;
+    font-weight: 300;
+    color: #592e59;
+    font-weight: ;
+    display: inline;
+  }
+  #contact #copyright {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 45px;
+    right: 0px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 12px;
+    font-weight: ;
+    direction: rtl;
+    color: #68696b;
+    text-align: center;
+    z-index: 6;
+  }
+  #contact #copyright .comment {
+    font-size: 12px;
+    font-weight: 300;
+    color: #68696b;
+    font-weight: ;
+    display: block;
+  }
+  #contact #footer {
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-top: 1px solid black;
+    z-index: 5;
+  }
+  #contact #contac2 {
+    display: none;
+  }
+  #contact #contacticon {
+    display: none;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 1279px) {
+  #contact {
+    height: 650px;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-image: url(tabContact_bk04.png);
+  }
+  #contact #address {
+    width: 350px ;
+    height: 100px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 14px;
+    font-weight: ;
+    direction: rtl;
+    color: #68696b;
+    text-align: right;
+    background-color: ;
+  }
+  #contact #address .comment {
+    font-size: 16px;
+    font-weight: 400;
+    color: #592e59;
+    font-weight: ;
+    display: inline;
+  }
+  #contact #phone {
+    width: 350px ;
+    height: 200px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 250px;
+    right: 170px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: ;
+    direction: ;
+    color: #68696b;
+    text-align: right;
+    background-color: ;
+  }
+  #contact #phone .comment {
+    font-size: 14px;
+    font-family: 'Droid Arabic Naskh';
+    color: #68696b;
+    font-weight: ;
+    display: ;
+  }
+  #contact #icones {
+    width: 50px ;
+    height: 240px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 243px;
+    right: 120px;
+    font-size: 25px;
+    font-weight: bold;
+    direction: ;
+    color: black;
+    text-align: center;
+    background-color: ;
+  }
+  #contact #icones .comment {
+    margin-top: 8px;
+  }
+  #contact #simialogo {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 150px;
+    left: 265px;
+    z-index: 6;
+  }
+  #contact #simialogo img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  #contact #text {
+    width: 350px;
+    height: 40px;
+    position: absolute;
+    bottom: 115px;
+    left: 125px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 13px;
+    font-weight: bold;
+    direction: rtl;
+    color: #592e59;
+    text-align: center;
+    z-index: 6;
+  }
+  #contact #text .comment {
+    font-size: 12px;
+    font-weight: 300;
+    color: #592e59;
+    font-weight: ;
+    display: inline;
+  }
+  #contact #copyright {
+    width: 350px;
+    height: 40px;
+    position: absolute;
+    bottom: 45px;
+    right: 125px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 12px;
+    font-weight: bold;
+    direction: rtl;
+    color: #68696b;
+    text-align: center;
+    z-index: 6;
+  }
+  #contact #copyright .comment {
+    font-size: 12px;
+    font-weight: 300;
+    color: #68696b;
+    font-weight: ;
+    display: block;
+  }
+  #contact #footer {
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-top: 1px solid black;
+    z-index: 5;
+  }
+  #contact #contac2 {
+    display: none;
+  }
+  #contact #contacticon {
+    display: none;
+  }
+}
+@media screen and (min-width:1280px) {
+  #contact {
+    height: 567px;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-image: url(ldesContactBk7.png);
+  }
+  #contact #address {
+    width: 350px ;
+    height: 100px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 14px;
+    font-weight: ;
+    direction: rtl;
+    color: #68696b;
+    text-align: right;
+    background-color: ;
+  }
+  #contact #address .comment {
+    font-size: 16px;
+    font-weight: 400;
+    color: #592e59;
+    font-weight: ;
+    display: inline;
+  }
+  #contact #phone {
+    width: 350px ;
+    height: 200px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 230px;
+    right: 450px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: ;
+    direction: ;
+    color: #68696b;
+    text-align: right;
+    background-color: ;
+  }
+  #contact #phone .comment {
+    font-size: 14px;
+    font-family: 'Droid Arabic Naskh';
+    color: #68696b;
+    font-weight: ;
+    display: ;
+  }
+  #contact #icones {
+    width: 50px ;
+    height: 240px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    position: absolute;
+    top: 220px;
+    right: 405px;
+    font-size: 25px;
+    font-weight: bold;
+    direction: ;
+    color: black;
+    text-align: center;
+    background-color: ;
+  }
+  #contact #icones .comment {
+    margin-top: 8px;
+  }
+  #contact #simialogo {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 50px;
+    left: 165px;
+    z-index: 6;
+  }
+  #contact #simialogo img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  #contact #text {
+    width: 350px;
+    height: 40px;
+    position: absolute;
+    bottom: 15px;
+    left: 35px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 14px;
+    font-weight: bold;
+    direction: rtl;
+    color: #592e59;
+    text-align: center;
+    z-index: 6;
+  }
+  #contact #text .comment {
+    font-size: 14px;
+    font-weight: 300;
+    color: #592e59;
+    font-weight: ;
+    display: inline;
+  }
+  #contact #copyright {
+    width: 350px;
+    height: 40px;
+    position: absolute;
+    bottom: 45px;
+    right: 35px;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 12px;
+    font-weight: bold;
+    direction: rtl;
+    color: #68696b;
+    text-align: right;
+    z-index: 6;
+  }
+  #contact #copyright .comment {
+    font-size: 12px;
+    font-weight: 300;
+    color: #68696b;
+    font-weight: ;
+    display: block;
+  }
+  #contact #footer {
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-top: 1px solid black;
+    z-index: 5;
+  }
+  #contact #contacticon {
+    width: 60px;
+    position: absolute;
+    top: 247px;
+    left: 179px;
+    text-align: center;
+    font-size: 40px;
+    z-index: 5000;
+    color: #7bb933;
+  }
+}
+#logo {
+  width: 90px;
+  height: 84px;
+  position: fixed;
+  top: 36px;
+  left: 50%;
+  margin-left: -45px;
+  z-index: 4000;
+}
+@media screen and (max-width:599px) {
+  #logo {
+    top: 8px;
+    margin-left: -140px;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 1279px) {
+  #logo {
+    top: 24px;
+  }
+}
+#logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.nav {
+  background-color: ;
+}
+@media screen and (max-width:599px) {
+  .nav {
+    display: none;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 1279px) {
+  .nav {
+    width: 37.5em;
+    height: 32px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: ;
+  }
+  .nav .half {
+    width: 50%;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .half .ll {
+    width: 15em;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .half .lr {
+    width: 3.75em;
+    height: 100%;
+    background-color: ;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .rl {
+    width: 3.75em;
+    height: 100%;
+    background-color: ;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .rr {
+    width: 15em;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .iconmy {
+    width: 3em;
+    height: 100%;
+    margin-left: 1.5em;
+    float: left;
+    background-color: ;
+  }
+  .nav .iconmy .top {
+    width: 100%;
+    height: 32px;
+    text-align: center;
+    font-size: 21px;
+    padding-top: 6px;
+  }
+  .nav .iconmy .bottom {
+    width: 100%;
+    height: 0px;
+    text-align: center;
+    direction: rtl;
+    font-family: "Droid Arabic Naskh";
+    font-size: 9px;
+    opacity: 0;
+  }
+}
+@media screen and (min-width:1280px) {
+  .nav {
+    width: 37.5em;
+    height: 48px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav .half {
+    width: 50%;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .half .ll {
+    width: 15em;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .half .lr {
+    width: 3.75em;
+    height: 100%;
+    background-color: ;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .rl {
+    width: 3.75em;
+    height: 100%;
+    background-color: ;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .rr {
+    width: 15em;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .iconmy {
+    width: 3em;
+    height: 100%;
+    margin-left: 1.5em;
+    float: left;
+    background-color: ;
+  }
+  .nav .iconmy .top {
+    width: 100%;
+    height: 28px;
+    text-align: center;
+    font-size: 24px;
+  }
+  .nav .iconmy .bottom {
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    direction: rtl;
+    font-family: "Droid Arabic Naskh";
+    font-size: 8px;
+    padding-top: 6px;
+  }
+}
+#menu {
+  width: 32px;
+  height: 32px;
+  position: fixed;
+  top: 62px;
+  left: 50%;
+  margin-left: -45px;
+  background-color: ;
+  cursor: pointer;
+  z-index: 4000;
+}
+@media screen and (max-width:599px) {
+  #menu {
+    text-align: center;
+    font-size: 25px;
+    color: #68696b;
+    z-index: 4000;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 1279px) {
+  #menu {
+    display: none;
+  }
+}
+@media screen and (min-width:1280px) {
+  #menu {
+    display: none;
+  }
+}
+.sphnav {
+  width: 30px;
+  height: 240px;
+  position: fixed;
+  top: 106px;
+  left: 47px;
+  background-color: ;
+  display: none;
+  z-index: 4000;
+}
+.sphnav .sphicon {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #cccac3;
+  padding-top: 4px;
+  background-color: white;
+}
+.sphnav .cancel {
+  color: #68696b;
+  cursor: pointer;
+}
+.sphnav .cancel:active {
+  color: black;
+}
+.sphnav .cancel:hover {
+  color: black;
+}
+#line {
+  width: 96px;
+  height: 110px;
+  background-color: ;
+  border-bottom: ;
+  position: fixed;
+  top: 119px;
+  left: 50%;
+  margin-left: -48px;
+  z-index: 2000;
+}
+#line img {
+  max-width: 100%;
+  max-height: 100%;
+}
+@media screen and (max-width:599px) {
+  #line {
+    display: none;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 1279px) {
+  #line {
+    display: none;
+  }
+}
+@media screen and (min-width:1280px) {
+  #line {
+    display: block;
+  }
+}
+#world {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  top: 190px;
+  left: 50%;
+  margin-left: -150px;
+  background-color: ;
+  z-index: 2000;
+}
+#world #circle {
+  width: 212.13px;
+  height: 212.13px;
+  background-color: ;
+  margin: 0;
+  position: absolute;
+  top: 43.935px;
+  left: 43.935px;
+  background-image: url(world6.png);
+}
+@media screen and (max-width:599px) {
+  #world {
+    display: none;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 1279px) {
+  #world {
+    display: none;
+  }
+}
+@media screen and (min-width:1280px) {
+  #world {
+    display: block;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width:1280px) {
+  body {
+    overflow: hidden;
+  }
+}
+.wrapper {
+  margin-top: 72px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  background: yellow;
+}
+@media screen and (max-width:599px) {
+  .wrapper {
+    width: 19.5em;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 1279px) {
+  .wrapper {
+    width: 37.5em;
+  }
+}
+@media screen and (min-width:1280px) {
+  .wrapper {
+    width: 73.5em;
+  }
+}
+a.anchor {
+  display: block;
+  position: relative;
+  visibility: hidden;
+}
+@media screen and (max-width:599px) {
+  a.anchor {
+    top: -90px;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 1279px) {
+  a.anchor {
+    top: -60px;
+  }
+}
+@media screen and (min-width:1280px) {
+  a.anchor {
+    top: -72px;
+  }
+}
+a:link {
+  text-decoration: none;
+  color: #68696b;
+}
+a:active {
+  color: black !important;
+}
+a:hover {
+  color: black !important;
+}
+p {
+  text-decoration: none;
+}

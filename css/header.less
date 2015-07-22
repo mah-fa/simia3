@@ -1,0 +1,25 @@
+
+#header {
+    height: ;
+    background-color: white;
+    border-bottom: 1px solid #68696b;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    z-index: 1000;
+    @media @sph {
+        width: @4cols + 2*(@gutter/@em);
+        margin-left: -(@4cols + 2*(@gutter/@em))/2;
+        height: 44px;
+    }
+    @media @tab {
+        width: @8cols + 2*(@gutter/@em);
+        margin-left: -(@8cols + 2*(@gutter/@em))/2;
+        height: 60px;
+    }
+    @media @ldes {
+        width: @16cols + 2*(@gutter/@em);
+        margin-left: -(@16cols + 2*(@gutter/@em))/2;
+        height: 72px;
+    }
+}

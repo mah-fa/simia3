@@ -1,0 +1,58 @@
+#menu {
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    top: 62px;
+    left: 50%;
+    margin-left: -45px;
+    background-color: ;
+    cursor: pointer;
+    z-index: 4000;
+    @media @sph {
+        text-align: center;
+        font-size: 25px;
+        color: #68696b;
+        z-index: 4000;
+    }
+    
+    @media @tab {
+        display: none;
+    }
+   
+    
+    @media @ldes {
+        display: none;
+    }
+}
+.sphnav {
+    width: 30px;
+    height: 240px;
+    position: fixed;
+    top: 106px;
+    left: 47px;
+    background-color: ;
+    display: none;
+    z-index: 4000;
+    .sphicon {
+        width: 30px;
+        height: 30px;
+        box-sizing: border-box;
+        float: left;
+        margin-bottom: 12px;
+        text-align: center;
+        font-size: 18px;
+        border: 1px solid #cccac3;
+        padding-top: 4px;
+        background-color: white;
+    }
+    .cancel {
+        color: #68696b;
+        cursor: pointer;
+    }
+    .cancel:active {
+        color: black;
+    }
+    .cancel:hover {
+        color: black;
+    }
+}
